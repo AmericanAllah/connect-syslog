@@ -1,0 +1,70 @@
+{
+    "name": "ActTst",
+    "version": "0.0.1",
+    "author": "Forescout Technologies - Cole Wilson",
+    "testEnable": true,
+    "web service": true,
+    "panels": [
+        {
+            "title": "Action Testing App",
+            "description": "This app is used to test the action framework for the Forescout Connect platform.",
+            "fields": [
+                {
+                    "display": "ActTst URL",
+                    "field ID": "connect_acttst_url",
+                    "type": "shortString",
+                    "mandatory": "false",
+                    "add to column": "true",
+                    "show column": "true",
+                    "tooltip": "",
+                    "value": "N/A"   
+                },
+                {
+                    "display": "ActTst Username",
+                    "field ID": "connect_acttst_username",
+                    "type": "shortString",
+                    "mandatory": "false",
+                    "tooltip": "Username to authenticate to the Connect web service."
+                },
+                {
+                    "display": "ActTst Password",
+                    "field ID": "connect_acttst_password",
+                    "type": "encrypted",
+                    "mandatory": "false",
+                    "tooltip": "Password for the Connect web service."
+                },
+                {
+                    "certification validation": true
+                },
+                {
+                    "authorization": true,
+                    "display": "Authorization refresh timer (minutes)",
+                    "min": 1,
+                    "max": 100,
+                    "value": 60
+                }
+            ]
+        },
+        {
+            "focal appliance": true,
+            "title": "Assign CounterACT Devices",
+            "description": "<html>Select the CounterACT device that will handle the Connect app's communication and run its scripts.</html>"
+        },
+        {
+            "title": "ActTst Parameters",
+            "description": "Additional settings and parameters.",
+            "fields": [
+                {
+                    "rate limiter": true,
+                    "display": "Number of API queries allowed per second.",
+                    "unit": 1,
+                    "min": 1,
+                    "max": 1000,
+                    "add to column": "true",
+                    "show column": "false",
+                    "value":10
+                }
+            ]
+        }
+    ]
+}

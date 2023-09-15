@@ -1,0 +1,614 @@
+{
+    "name": "ActTst",
+    "groups": [
+        {
+            "name": "connect_acttst_acttst",
+            "label": "ActTst"
+        }
+    ],
+    "properties": [
+        {
+            "tag": "connect_acttst_string",
+            "label": "String",
+            "description": "ActTst String",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "string",
+            "resolvable": false
+        },
+        {
+            "tag": "connect_acttst_string_opt",
+            "label": "String",
+            "description": "ActTst String",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "string",
+            "resolvable": false,
+            "options": [
+                {
+                    "name": "Option1",
+                    "label": "Option1"
+                },
+                {
+                    "name": "Option2",
+                    "label": "Option2"
+                }
+            ]
+        },
+        {
+            "tag": "connect_acttst_string_list",
+            "label": "String List",
+            "description": "ActTst String List",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "string",
+            "list": true,
+            "overwrite": true,
+            "resolvable": false
+        },
+        {
+            "tag": "connect_acttst_composite",
+            "label": "Composite",
+            "description": "ActTst Composite",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "composite",
+            "resolvable": false,
+            "subfields": [
+                {
+                    "tag": "acttst_comp_list_valname",
+                    "label": "Value Name",
+                    "description": "Value Name provided in the Composite List.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_comp_list_val",
+                    "label": "Value",
+                    "description": "Value provided in the Composite List.",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "tag": "connect_acttst_comp_application",
+            "label": "Composite Applications Test",
+            "description": "This is a test to see if setting a property to resolvable equals false and adding dependencies, then adding the property to an action as a dependency works to get the strange composite list properties and other list properties that are seemingly not available consistently.",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "composite",
+            "resolvable": false,
+            "list": true,
+            "overwrite": true,
+            "subfields": [
+                {
+                    "tag": "acttst_app_name",
+                    "label": "Application Name",
+                    "description": "Application name.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_app_version",
+                    "label": "Application Version",
+                    "description": "Application version.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_app_user",
+                    "label": "Application User",
+                    "description": "Application user.",
+                    "type": "string"
+                }
+            ],
+            "dependencies": [
+                {
+                    "name": "comp_application",
+                    "redo_new": true,
+                    "redo_change": true
+                }
+            ]
+        },
+        {
+            "tag": "connect_acttst_hwi_disk",
+            "label": "HWI Disk Test",
+            "description": "This is a test to see if setting a property to resolvable equals false and adding dependencies, then adding the property to an action as a dependency works to get the strange composite list properties and other list properties that are seemingly not available consistently.",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "composite",
+            "resolvable": false,
+            "list": true,
+            "overwrite": true,
+            "subfields": [
+                {
+                    "tag": "acttst_hwi_disk_name",
+                    "label": "Disk Name",
+                    "description": "Disk name.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_disk_size",
+                    "label": "Disk Size",
+                    "description": "Disk size.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_disk_type",
+                    "label": "Disk Type",
+                    "description": "Disk type.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_disk_status",
+                    "label": "Disk Status",
+                    "description": "Disk status.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_disk_fsys",
+                    "label": "Disk File System",
+                    "description": "Disk file system.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_disk_dev_id",
+                    "label": "Disk Device ID",
+                    "description": "Disk device ID.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_disk_med_type",
+                    "label": "Disk Media Type",
+                    "description": "Disk media type.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_disk_free_space",
+                    "label": "Disk Free Space",
+                    "description": "Available free space on the disk.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_disk_availability",
+                    "label": "Disk Availability",
+                    "description": "Disk availability.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_disk_volume_name",
+                    "label": "Disk Volume Name",
+                    "description": "The volume name on the disk.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_disk_volume_desc",
+                    "label": "Disk Volume Description",
+                    "description": "The volume description on the disk.",
+                    "type": "string"
+                }
+            ],
+            "dependencies": [
+                {
+                    "name": "hwi_disk",
+                    "redo_new": true,
+                    "redo_change": true
+                }
+            ]
+        },
+        {
+            "tag": "connect_acttst_hwi_computer",
+            "label": "HWI Computer Test",
+            "description": "This is a test to see if setting a property to resolvable equals false and adding dependencies, then adding the property to an action as a dependency works to get the strange composite list properties and other list properties that are seemingly not available consistently.",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "composite",
+            "resolvable": false,
+            "list": true,
+            "overwrite": true,
+            "subfields": [
+                {
+                    "tag": "acttst_hwi_computer_total_physical_memory",
+                    "label": "Total Physical Memory",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_user_name",
+                    "label": "Username",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_model",
+                    "label": "Model",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_thermal_state",
+                    "label": "Thermal State",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_pc_system_type",
+                    "label": "PC System State",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_workgroup",
+                    "label": "Workgroup",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_power_management_supported",
+                    "label": "Power Management Supported",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_power_supply_state",
+                    "label": "Power Supply State",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_primary_owner_contact",
+                    "label": "Primary Owner Contact",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_domain_role",
+                    "label": "Domain Role",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_power_state",
+                    "label": "Power State",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_number_of_processors",
+                    "label": "Number of Processors",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_support_contact_description",
+                    "label": "Support Contact Description",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_system_type",
+                    "label": "Computer ",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_domain",
+                    "label": "Domain",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_current_time_zone",
+                    "label": "Current Time Zone",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_name",
+                    "label": "Computer Name",
+                    "description": "Computer info.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_hwi_computer_status",
+                    "label": "Status",
+                    "description": "Computer info.",
+                    "type": "string"
+                }
+            ],
+            "dependencies": [
+                {
+                    "name": "hwi_computer",
+                    "redo_new": true,
+                    "redo_change": true
+                }
+            ]
+        },
+        {
+            "tag": "connect_acttst_composite",
+            "label": "Composite List",
+            "description": "ActTst Composite",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "composite",
+            "resolvable": false,
+            "list": true,
+            "overwrite": true,
+            "subfields": [
+                {
+                    "tag": "acttst_comp_list_valname",
+                    "label": "Value Name",
+                    "description": "Value Name provided in the Composite List.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_comp_list_val",
+                    "label": "Value",
+                    "description": "Value provided in the Composite List.",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "tag": "connect_acttst_date",
+            "label": "Date",
+            "description": "ActTst Date",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "date",
+            "resolvable": false
+        },
+        {
+            "tag": "connect_acttst_boolean",
+            "label": "Boolean",
+            "description": "ActTst Boolean",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "boolean",
+            "resolvable": false
+        },
+        {
+            "tag": "connect_acttst_int",
+            "label": "Integer",
+            "description": "ActTst Integer",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "integer",
+            "resolvable": false
+        },
+        {
+            "tag": "connect_acttst_in_group",
+            "label": "In Group Test",
+            "description": "Testing the in-group property tag.",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "string",
+            "list": true,
+            "overwrite": true,
+            "resolvable": false,
+            "dependencies": [
+                {
+                    "name": "in-group",
+                    "redo_new": true,
+                    "redo_change": true
+                }
+            ]
+        },
+        {
+            "tag": "connect_acttst_compliance",
+            "label": "ActTst Compliance",
+            "description": "Testing actions to set compliance.",
+            "group": "connect_acttst_acttst",
+            "web_enabled": true,
+            "type": "composite",
+            "list": true,
+            "overwrite": true,
+            "resolvable": false,
+            "subfields": [
+                {
+                    "tag": "acttst_compliance_category",
+                    "label": "Compliance Category",
+                    "description": "Compliance category.",
+                    "type": "string"
+                },
+                {
+                    "tag": "acttst_compliance_result",
+                    "label": "Compliance Result",
+                    "description": "Compliance result.",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "action_groups": [
+        {
+            "name": "connect_acttst_acttst",
+            "label": "ActTst"
+        }
+    ],
+    "actions": [
+        {
+            "name": "connect_acttst_action_1",
+            "label": "ActTst Action 1",
+            "group": "connect_acttst_acttst",
+            "description": "<html><h3>ActTst Action 1</h3></html>",
+            "ip_required": false,
+            "threshold_percentage": 100,
+            "dependencies": [
+                {
+                    "name": "ip",
+                    "redo_new": true,
+                    "redo_change": true
+                },
+                {
+                    "name": "mac",
+                    "redo_new": true,
+                    "redo_change": true
+                },
+                {
+                    "name": "connect_acttst_in_group",
+                    "redo_new": true,
+                    "redo_change": true
+                },
+                {
+                    "name": "connect_acttst_hwi_computer",
+                    "redo_new": true,
+                    "redo_change": true
+                },
+                {
+                    "name": "connect_acttst_hwi_disk",
+                    "redo_new": true,
+                    "redo_change": true
+                },
+                {
+                    "name": "connect_acttst_comp_application",
+                    "redo_new": true,
+                    "redo_change": true
+                }
+            ],
+            "params": [
+                {
+                    "name": "acttst_action_1_string_param",
+                    "label": "ActTst Action 1 String Param",
+                    "description": "ActTst Action 1 String Param.",
+                    "type": "string",
+                    "default": "Put what you want here ;)"
+                },
+                {
+                    "name": "acttst_action_1_int_param",
+                    "label": "ActTst Action 1 Integer Param",
+                    "description": "ActTst Action 1 Integer Param.",
+                    "type": "integer"
+                },
+                {
+                    "name": "acttst_action_1_boolean_param",
+                    "label": "ActTst Action 1 Boolean Param",
+                    "description": "ActTst Action 1 Boolean Param.",
+                    "type": "boolean"
+                },
+                {
+                    "name": "acttst_action_1_list_param",
+                    "label": "ActTst Action 1 List Param",
+                    "description": "ActTst Action 1 List Param.",
+                    "type": "list",
+                    "options": [
+                        {
+                            "name": "c2c_policy_set_groups_p1",
+                            "label": "DOD C2C Policy Set"
+                        },
+                        {
+                            "name": "c2c_prof_svc_set_groups_p1",
+                            "label": "Professional Services (PS) Policy Set"
+                        }
+                    ]
+                },
+                {
+                    "name": "acttst_action_1_string_multi_param",
+                    "label": "ActTst Action 1 String Multiline Param",
+                    "description": "ActTst Action 1 String Multiline Param.",
+                    "type": "string",
+                    "multiline": true,
+                    "default": "Put what you want here ;) x2"
+                }
+            ]
+        },
+        {
+            "name": "connect_acttst_action_2",
+            "label": "Set Compliance",
+            "group": "connect_acttst_acttst",
+            "description": "<html><h3>ActTst Action 2</h3></html>",
+            "ip_required": false,
+            "threshold_percentage": 100,
+            "params": [
+                {
+                    "name": "acttst_action_2_compliance_category",
+                    "label": "Compliance Category",
+                    "description": "ActTst Action 1 List Param.",
+                    "type": "list",
+                    "options": [
+                        {
+                            "name": "Antimalware",
+                            "label": "Antimalware"
+                        },
+                        {
+                            "name": "Antivirus",
+                            "label": "Antivirus"
+                        },
+                        {
+                            "name": "Encryption",
+                            "label": "Encryption"
+                        },
+                        {
+                            "name": "Firewall",
+                            "label": "Firewall"
+                        }
+                    ]
+                },
+                {
+                    "name": "acttst_action_2_compliance_result",
+                    "label": "Compliance Category",
+                    "description": "ActTst Action 1 List Param.",
+                    "type": "list",
+                    "options": [
+                        {
+                            "name": "Compliant",
+                            "label": "Compliant"
+                        },
+                        {
+                            "name": "Noncompliant",
+                            "label": "Noncompliant"
+                        },
+                        {
+                            "name": "Irresolvable",
+                            "label": "Irresolvable"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "scripts": [
+        {
+            "name": "acttst_test.py",
+            "test": true
+        },
+        {
+            "name": "acttst_auth.py",
+            "authorization": true
+        },
+        {
+            "name": "acttst_action_1.py",
+            "actions": [
+                "connect_acttst_action_1",
+                "connect_acttst_action_2"
+            ]
+        },
+        {
+            "name": "acttst_library_file.py",
+            "library_file": true
+        },
+        {
+            "name": "acttst_app_instance_cache.py",
+            "app_instance_cache": true
+        }
+    ],
+    "policy_template": {
+        "policy_template_group": {
+            "name": "connect_acttst",
+            "label": "ActTst",
+            "display": "ActTst",
+            "description": "ActTst",
+            "full_description": "ActTst",
+            "title_image": "acttst.png"
+          },
+          "policies": [
+            {
+              "name": "connect_acttst_policy_1",
+              "label": "ActTst Policy 1",
+              "display": "ActTst Policy 1",
+              "help": "ActTst Policy 1",
+              "description": "ActTst Policy 1.",
+              "file_name": "ActTst Policy 1.xml",
+              "full_description": "<html>ActTst Policy 1.</html>",
+              "title_image": "acttst.png"
+            }
+          ]
+    }
+}
